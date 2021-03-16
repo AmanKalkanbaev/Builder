@@ -3,7 +3,7 @@
 function App() {
   return (
     <div className="App">
-      Pizza Buolder by master Amankey
+      Pizza Builder by master Amankey
     </div>
   );
 }
