@@ -1,0 +1,10 @@
+.spacex img{
+    width: 200px;
+    mix-blend-mode: color-burn;
+}
+.spacex span{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: -20px;
+}
