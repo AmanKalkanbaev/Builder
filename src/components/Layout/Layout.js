@@ -3,10 +3,11 @@ import Toolbar from "./Toolbar/Toolbar";
 import classes from "./Layout.module.css";
 
 const Layout = ({ children }) => {
+    const [drawerOpen, setDrawerOpen] = useState(false);
     return (
         <div className={classes.Layout}>
-            <Toolbar />
-            <Drawer />
+            <Toolbar setdrawerOpen={setDrawerOpen} />
+            <Drawer drawerOpen={drawerOpen} />
             {children}
         </div>
     );

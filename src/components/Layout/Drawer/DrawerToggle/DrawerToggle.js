@@ -1,12 +1,10 @@
 
 import classes from "./DrawerToggle.module.css";
 
-const DrawerToggle = () => {
+const DrawerToggle = ({setdDrawerOpen}) => {
     return (
-        <div className={classes.Drawer}>
-            <div className={classes.DrawerToggle}>
-                Toggle
-            </div>
+        <div className={classes.DrawerToggle} onClick={() => setDrawerOpen(true)}>
+            
         </div>
     );
 }
