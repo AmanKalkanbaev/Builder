@@ -1,0 +1,9 @@
+.SatelitesControl{
+    flex: 0 0 300px;
+    background-color: rgb(37, 45, 56);
+    border-radius:  1rem;
+    padding: 3rem;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+}

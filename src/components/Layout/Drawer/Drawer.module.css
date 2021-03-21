@@ -6,6 +6,8 @@
     width: 300px;
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.322);
+    z-index: 10;
+    transition: transform .3s ease-out;
 }
 
 .open{
@@ -15,3 +17,12 @@
 .close{
     transform: translateX(-310px);
 }
+
+@media (min-width: 550px) {
+    .Drawer {
+      display: none;
+    }
+}
+
+  
+  
