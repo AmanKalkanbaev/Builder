@@ -1,4 +1,4 @@
-.SatelitesControl{
+.SatellitesControl{
     flex: 0 0 15rem;
     background-color: rgb(37, 45, 56);
     border-radius:  1rem;
@@ -6,7 +6,7 @@
     color: blanchedalmond;
     text-align: center;
 }
-.SatelitesControl p{
+.SatellitesControl p{
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 2rem;
