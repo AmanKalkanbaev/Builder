@@ -1,9 +1,13 @@
 .SatelitesControl{
-    flex: 0 0 300px;
+    flex: 0 0 15rem;
     background-color: rgb(37, 45, 56);
     border-radius:  1rem;
-    padding: 3rem;
+    padding: 2rem;
     color: blanchedalmond;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+}
+.SatelitesControl p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
 }

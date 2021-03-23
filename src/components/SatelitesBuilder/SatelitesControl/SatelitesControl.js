@@ -5,7 +5,11 @@ const SatelitesControl = () => {
   
     return (
       <div className={classes.SatelitesControl}>
-          SatelitesControl
+          <p>Satelites Control</p>
+          <p>Satelites Control</p>
+          <p>Satelites Control</p>
+          <p>Satelites Control</p>
+          <p>Satelites Control</p>
       </div>
     );
   }
