@@ -5,7 +5,7 @@ const SatelitesPreview = () => {
   
     return (
       <div className={classes.SatelitesPreview}>
-          <img src={map}/>
+          <img src={map} alt="WorldMap"/>
       </div>
     );
   }
