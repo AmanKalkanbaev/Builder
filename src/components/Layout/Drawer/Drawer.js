@@ -1,7 +1,9 @@
 import Backdrop from "../../UI/Backdrop";
-import classes from "./Drawer.module.css";
 import Logo from "../../Logo/Logo";
 import Nav from "../../Nav/Nav";
+
+import classes from "./Drawer.module.css";
+
 const Drawer = ({ open, closeDrawer }) => {
     const drawerClasses = [
       classes.content,
