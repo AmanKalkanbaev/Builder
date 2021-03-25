@@ -1,6 +1,7 @@
-import classes from "./SatellitesPreview.module.css";
 import Satellites from "../Satellites/Satellites";
 import map from "./map.png"
+
+import classes from "./SatellitesPreview.module.css";
 
 const SatellitesPreview = ({satellites}) => {
   const result = [];
