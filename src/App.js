@@ -1,8 +1,8 @@
 import Layout from "./components/Layout/Layout";
-import SatelitesBuilder from "./components/SatelitesBuilder/SatelitesBuilder";
+import SatellitesBuilder from "./components/SatellitesBuilder/SatellitesBuilder";
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Layout>

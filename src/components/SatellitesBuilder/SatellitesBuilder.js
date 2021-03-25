@@ -7,8 +7,6 @@ const SatellitesBuilder = () => {
     comunication: 1,
     military: 1,
     astronomical: 1,
-    disco: 1,
-    snoopdog: 1,
   }
   
     return (
