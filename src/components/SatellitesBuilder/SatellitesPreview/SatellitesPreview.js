@@ -7,7 +7,7 @@ const SatellitesPreview = ({satellites}) => {
   const result = [];
   for (const satellite in satellites) {
     for (let i = 0; i < satellites[satellite]; i++) {
-      result.push(<Satellites type={satellite} />)
+      result.push(<Satellites key={satellite + i} type={satellite} />)
     }
   }
   
