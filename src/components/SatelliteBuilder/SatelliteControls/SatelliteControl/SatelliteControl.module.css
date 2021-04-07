@@ -1,0 +1,10 @@
+.SatelliteControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem 0;
+}
+.SatelliteControl .satellite div {
+  position: static;
+  margin: 0 .5rem;
+}

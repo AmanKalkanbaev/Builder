@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Toolbar from "./Toolbar/Toolbar";
 import Drawer from "./Drawer/Drawer";
-import { useState } from "react";
 
 import classes from "./Layout.module.css";
 
@@ -17,5 +17,5 @@ const Layout = ({ children }) => {
     </div>
   );
 }
- 
+
 export default Layout;

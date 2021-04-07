@@ -1,13 +1,13 @@
-
 import classes from "./Nav.module.css";
 
-const Nav = ({ children }) => {
-    return (
-        <div className={classes.Nav}>
-            Log in  |
-            Contacts
-        </div>
-    );
+const Nav = () => {
+  return (
+    <div className={classes.Nav}>
+      <a>Contacts</a> 
+      <br/>
+      <a>Log in</a>
+    </div>
+  );
 }
 
 export default Nav;

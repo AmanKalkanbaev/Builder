@@ -1,0 +1,45 @@
+.SatellitePreview {
+  flex: 0 0 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.satellites img{
+  position: relative;
+  left: -500px;
+  width: 700px;
+  animation: planet-movement 20s linear  infinite ;
+}
+.pizza {
+  width: 400px;
+  height: 400px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  background-color: rgb(52, 0, 82);
+  overflow: hidden;
+  background-size: contain;
+  box-shadow: inset -20px -17px 25px rgba(0, 0, 0, 0.281), inset 10px 10px 20px rgba(255, 255, 254, 0.11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price {
+  background-color: rgb(31, 31, 31);
+  border-radius: 0.2rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+
+@keyframes planet-movement{
+  0%{
+      left: -300px;
+
+  }
+  100%{
+      left: 300px;
+  }
+}

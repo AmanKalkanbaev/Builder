@@ -1,10 +1,16 @@
-.spacex img{
-    width: 200px;
-    mix-blend-mode: color-burn;
+.Logo {
+  display: flex;
+  align-items: center;
 }
-.spacex span{
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    margin-left: -20px;
+.Logo img {
+  height: 1.7rem;
+  margin: .5rem;
+}
+
+.Logo div{
+  font-size: 1.5rem;
+  color: #ffcc00;
+  position: relative;
+  bottom: -5px;
+  left: -40px;
 }

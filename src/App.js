@@ -1,13 +1,15 @@
 import Layout from "./components/Layout/Layout";
-import SatellitesBuilder from "./components/SatellitesBuilder/SatellitesBuilder";
-import './App.css';
+import SatelliteBuilder from "./components/SatelliteBuilder/SatelliteBuilder";
+import Stars from "./components/UI/Stars/Stars";
+
+import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
+      {/* <Stars/> */}
       <Layout>
-        <SatellitesBuilder>
-        </SatellitesBuilder>
+        <SatelliteBuilder />
       </Layout>
     </div>
   );

@@ -1,0 +1,22 @@
+.Button {
+  font-family: 'Barlow Condensed', sans-serif;
+    border: 0;
+    margin: 0 .5rem;
+    border-radius: .2rem;
+    min-width: 2rem;
+    padding: 0 1rem;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .Button:not(:disabled):hover {
+    background-color: #ffcc00;
+  }
+  .Button:focus {
+    outline: none;
+  }
+  .Button:disabled {
+    opacity: .4;
+  } 

@@ -1,5 +1,22 @@
 .Nav{
-    color: blanchedalmond;
-    font-size: 25px;
-    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav a{
+    cursor: pointer;
+}
+
+.Nav a:hover{
+    cursor: pointer;
+    color: #696969;
+}
+
+.Nav a:last-child{
+    color: #ffcc00;
+    margin-left: 1rem;
+}
+
+.Nav a:last-child:hover{
+    color: #696969;
 }

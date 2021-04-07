@@ -1,14 +1,13 @@
-import spacex from './spacex.svg';
 import classes from "./Logo.module.css";
+import logo from "../../../images/spacex.svg";
 
-const Logo = ({ children }) => {
-    return (
-        <div className={classes.spacex}>
-           <img src={spacex} alt="SpacexLogo"/>
-           <span>Simulator</span>
-        </div>
-        
-    );
+const Logo = () => {
+  return (
+    <div className={classes.Logo}>
+      <img src={logo} alt="Logo of the Pizza project" />
+      <div>Simulaor</div>
+    </div>
+  );
 }
 
 export default Logo;
