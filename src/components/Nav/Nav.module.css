@@ -3,20 +3,20 @@
     justify-content: space-between;
 }
 
-.Nav a{
+.Nav p{
     cursor: pointer;
 }
 
-.Nav a:hover{
+.Nav p:hover{
     cursor: pointer;
     color: #696969;
 }
 
-.Nav a:last-child{
+.Nav p:last-child{
     color: #ffcc00;
     margin-left: 1rem;
 }
 
-.Nav a:last-child:hover{
+.Nav p:last-child:hover{
     color: #696969;
 }

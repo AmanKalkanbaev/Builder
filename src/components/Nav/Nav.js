@@ -3,9 +3,9 @@ import classes from "./Nav.module.css";
 const Nav = () => {
   return (
     <div className={classes.Nav}>
-      <a>Contacts</a> 
+      <p>Contacts</p> 
       <br/>
-      <a>Log in</a>
+      <p>Log in</p>
     </div>
   );
 }
