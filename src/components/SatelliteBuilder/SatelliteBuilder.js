@@ -1,10 +1,11 @@
 import SatellitePreview from "./SatellitePreview/SatellitePreview";
 import PizzaControls from "./SatelliteControls/SatelliteControls";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
 
 import classes from "./SatelliteBuilder.module.css";
+import axios from "axios";
 
 const SatelliteBuilder = () => {
   const prices = {
@@ -29,7 +30,13 @@ const SatelliteBuilder = () => {
   }
 
   const [isBuying, setIsBuying] = useState(false);
-
+  useEffect(() => {
+    axios.get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
+    .then(response => {
+      setSatellites(response.data.satellites);
+      setPrice(response.data.price);
+    })
+  },[])
   function addSatellite(type) {
     const newSatellites = { ...satellites };
     newSatellites[type]++;
