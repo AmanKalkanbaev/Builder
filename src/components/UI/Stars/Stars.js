@@ -28,7 +28,7 @@ const Stars = (star) => {
         star.style.boxShadow = "0 0 " + size + "px " + size / 2 + "px #043668";
         star.style.animationDuration = randomBetween(params.duration.min, params.duration.max) + "s";
       
-        ("#root").append(star);
+        // $("#root").append(star);
     }
     return ( 
         <div className={classes.Stars}>

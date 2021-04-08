@@ -16,15 +16,7 @@ const SatelliteBuilder = () => {
     navigational: 23,
     television: 15,
   };
-  const [satellites, setSatellites] = useState({
-    astronomical: 0,
-    comunication: 0,
-    medical: 0,
-    meteorological: 0,
-    military: 0,
-    navigational: 0,
-    television: 0,
-  });
+  const [satellites, setSatellites] = useState({});
   const [price, setPrice] = useState(0);
 
 
