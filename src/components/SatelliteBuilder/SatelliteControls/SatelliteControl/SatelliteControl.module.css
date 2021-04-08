@@ -8,3 +8,14 @@
   position: static;
   margin: 0 .5rem;
 }
+
+.satellite{
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.ControlLine{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}

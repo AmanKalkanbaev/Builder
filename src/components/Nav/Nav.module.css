@@ -2,21 +2,3 @@
     display: flex;
     justify-content: space-between;
 }
-
-.Nav p{
-    cursor: pointer;
-}
-
-.Nav p:hover{
-    cursor: pointer;
-    color: #696969;
-}
-
-.Nav p:last-child{
-    color: #ffcc00;
-    margin-left: 1rem;
-}
-
-.Nav p:last-child:hover{
-    color: #696969;
-}

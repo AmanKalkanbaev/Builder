@@ -15,12 +15,14 @@ const SatelliteControl = ({ type, add, remove }) => {
   }
   return (
     <div className={classes.SatelliteControl}>
-      <Button className={classes.more} onClick={() => add(type)}>+</Button>
-      <div className={classes.satellite}>
-        {/* <Satellite type={type} fixed /> */}
-        {names[type]}
+      <div className={classes.ControlLine}>
+        <Button className={classes.more} onClick={() => add(type)}>+</Button>
+        <div className={classes.satellite}>
+          {/* <Satellite type={type} fixed /> */}
+          {names[type]}
+        </div>
+        <Button className={classes.less} onClick={() => remove(type)}>-</Button>
       </div>
-      <Button className={classes.less} onClick={() => remove(type)}>-</Button>
     </div>
   );
 }
