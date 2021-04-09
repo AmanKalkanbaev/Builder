@@ -16,9 +16,11 @@ const SatellitePreview = ({ satellites, price }) => {
       <div className={classes.pizza}>
         <div className={classes.satellites}>
           <img src={Map} alt="WorldMap"/>
-          {result}
+          
         </div>
+
       </div>
+      {result}
       <div className={classes.price}>$ {price.toFixed(0)} M</div>
     </div>
   );
