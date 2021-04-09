@@ -1,6 +1,7 @@
 .Logo {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .Logo img {
   height: 1.7rem;
@@ -13,4 +14,13 @@
   position: relative;
   bottom: -5px;
   left: -40px;
+}
+
+@media (max-width: 549px) {
+  .Logo{
+    flex-direction: column;
+  }
+  .Logo div{
+    left: -4.5rem;
+  }
 }
