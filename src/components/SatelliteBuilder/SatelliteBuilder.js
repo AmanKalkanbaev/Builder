@@ -70,6 +70,7 @@ const SatelliteBuilder = () => {
         satellites={satellites}
         addSatellite={addSatellite}
         removeSatellite={removeSatellite}
+        price={price}
         />
     </div>
   );
