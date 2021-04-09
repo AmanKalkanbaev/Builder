@@ -1,0 +1,7 @@
+.OrderSummary ul{
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+.OrderSummary strong{
+    font-size: 1.5rem;
+}

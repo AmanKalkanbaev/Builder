@@ -3,8 +3,9 @@
     z-index: 1;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    width: 60%;
+    width: 40%;
     left: 20%;
+    border-radius: 15px;
     top: 20%;
     padding: 1rem 2rem;
     transition: transform .3s ease-out;
