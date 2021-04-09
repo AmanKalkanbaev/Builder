@@ -3,6 +3,7 @@
 }
 
 .NavItem a{
+    display: block;
     text-decoration: none;
     color: aliceblue;
     padding: 1rem;
@@ -18,4 +19,11 @@
 .NavItem a:active,
 .NavItem a.active{
     color: #ffcc00;
+}
+
+@media (max-width: 549px) {
+    .NavItem a{
+        border-bottom: none;
+        border-right: 5px solid transparent;
+    }
 }
