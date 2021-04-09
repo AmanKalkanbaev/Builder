@@ -1,17 +1,19 @@
 .NavItem{
     list-style-type: none;
-    margin-left: 2rem;
 }
 
 .NavItem a{
     text-decoration: none;
     color: aliceblue;
+    padding: 1.5rem;
+    border-bottom: 1px solid #000;
 }
 
 .NavItem a:hover{
-    color: #ffcc00;
+    color: #888888;
 }
 
-.NavItem a:focus{
-    color: #5e5e5e;
+.NavItem a:active,
+.NavItem a.active{
+    color: #ffcc00;
 }
