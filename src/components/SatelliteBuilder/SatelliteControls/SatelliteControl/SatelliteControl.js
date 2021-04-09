@@ -1,4 +1,4 @@
-import Satellite from "../../Satellites/Satellites";
+// import Satellite from "../../Satellites/Satellites";
 import Button from "../../../UI/Button/Button";
 
 import classes from "./SatelliteControl.module.css";
