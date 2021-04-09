@@ -10,7 +10,7 @@
   width: 700px;
   animation: planet-movement 20s linear  infinite ;
 }
-.pizza {
+.planet {
   width: 400px;
   height: 400px;
   margin-right: 1rem;

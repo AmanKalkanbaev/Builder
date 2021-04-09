@@ -13,7 +13,7 @@ const SatellitePreview = ({ satellites, price }) => {
 
   return (
     <div className={classes.SatellitePreview}>
-      <div className={classes.pizza}>
+      <div className={classes.planet}>
         <div className={classes.satellites}>
           <img src={Map} alt="WorldMap"/>
           
