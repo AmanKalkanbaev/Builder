@@ -5,11 +5,13 @@
 .NavItem a{
     text-decoration: none;
     color: aliceblue;
-    padding: 1.5rem;
-    border-bottom: 1px solid #000;
+    padding: 1rem;
+    border-bottom: 5px solid transparent;
+    transition: all .2s ease-in;
 }
 
 .NavItem a:hover{
+    border-color: #ffcc00;
     color: #888888;
 }
 
