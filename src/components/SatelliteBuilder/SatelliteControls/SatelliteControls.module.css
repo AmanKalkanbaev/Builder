@@ -1,4 +1,7 @@
 .SatelliteControls {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
   right: 1rem;
   flex: 0 0 400px;
@@ -6,10 +9,25 @@
   padding : 1rem 1rem 2rem 1rem;
   background-color: rgb(31, 31, 31);
   color: rgb(255, 255, 255);
-  text-align: center;
 }
 
 .SatelliteControls strong{
+  display: flex;
+  justify-content: center;
   font-size: 2rem;
+  color: #ffcc00;
+}
+
+.SatelliteControls .order{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.order .price{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.price span{
   color: #ffcc00;
 }
