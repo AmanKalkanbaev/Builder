@@ -20,7 +20,7 @@ const SatellitePreview = ({ satellites, price }) => {
 
       </div>
       {result}
-      <div className={classes.price}>$ {price.toFixed(0)} M</div>
+      {/* <div className={classes.price}>$ {price.toFixed(0)} M</div> */}
     </div>
   );
 }
