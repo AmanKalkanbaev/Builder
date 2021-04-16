@@ -1,9 +1,9 @@
 import Satellite from "../Satellites/Satellites";
-import Map from "../../../images/map.png";
+import planet from "../../../images/00013.mp4"
 
 import classes from "./SatellitePreview.module.css";
 
-const SatellitePreview = ({ satellites, price }) => {
+const SatellitePreview = ({ satellites }) => {
   const result = [];
   for (const satellite in satellites) {
     for (let i = 0; i < satellites[satellite]; i++) {
@@ -13,16 +13,13 @@ const SatellitePreview = ({ satellites, price }) => {
 
   return (
     <div className={classes.SatellitePreview}>
-      <div className={classes.planet}>
-        <div className={classes.map}>
-          <img src={Map} alt="WorldMap"/>
-        </div>
-
+      <video preload="auto" autoPlay={true} loop={true}  muted="muted" src={planet} className={classes.video} />
+      <div className={classes.results} >
+        {result}
       </div>
-      {result}
-      {/* <div className={classes.price}>$ {price.toFixed(0)} M</div> */}
     </div>
   );
 }
+
 
 export default SatellitePreview;

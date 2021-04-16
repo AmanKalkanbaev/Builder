@@ -6,7 +6,21 @@
     width: 40%;
     left: 20%;
     border-radius: 15px;
-    top: 20%;
+    top: 10%;
     padding: 1rem 2rem;
     transition: transform .3s ease-out;
   } 
+
+  @media (max-width: 632px) {
+    .content{
+      
+      padding: 1rem .5rem;
+    }
+  }
+  @media (max-width: 485px) {
+    .content{
+      width: 80%;
+      /* left: 0; */
+      padding: 1rem .5rem;
+    }
+  }

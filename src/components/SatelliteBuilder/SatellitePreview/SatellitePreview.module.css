@@ -3,34 +3,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transform: rotate(0);
+  animation: orbit-rotate 20s infinite ;
 }
-.map img{
-  position: relative;
-  left: -500px;
-  width: 700px;
-  animation: planet-movement 20s linear  infinite ;
+
+.video{
+  width: 500px;
+  height: 500px;
 }
-.planet {
-  width: 400px;
-  height: 400px;
-  margin-right: 1rem;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  background-color: rgb(52, 0, 82);
-  overflow: hidden;
-  background-size: contain;
-  box-shadow: inset -20px -17px 25px rgba(0, 0, 0, 0.281), inset 10px 10px 20px rgba(255, 255, 254, 0.11);
+
+.results{
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.price {
-  background-color: rgb(31, 31, 31);
-  border-radius: 0.2rem;
-  padding: 0 1rem;
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
+  flex-wrap: wrap;
 }
 
 
@@ -43,3 +27,12 @@
       left: 300px;
   }
 }
+/* @keyframes orbit-rotate{
+  0%{
+    transform: rotate(0);
+
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+} */

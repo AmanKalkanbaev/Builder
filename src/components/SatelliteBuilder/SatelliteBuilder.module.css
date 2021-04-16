@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 833px) {
+@media (max-width: 916px) {
   .SatelliteBuilder {
     justify-content: center;
   }
