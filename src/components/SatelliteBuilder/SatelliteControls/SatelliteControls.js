@@ -7,10 +7,19 @@ const SatelliteControls = ({ satellites, addSatellite, removeSatellite, canBuy, 
   const results = [];
   for (const satellite in satellites) {
     results.push(<SatelliteControl
-        key={satellite}
-        add={addSatellite}
-        remove={removeSatellite}
-        type={satellite} />)
+
+      key={satellite}
+      add={addSatellite}
+      remove={removeSatellite}
+      type={satellite} 
+
+    />)
+  }
+
+  let money = "M";
+
+  if(price >= 1000) {
+    money = "B";
   }
 
   return (
@@ -19,7 +28,7 @@ const SatelliteControls = ({ satellites, addSatellite, removeSatellite, canBuy, 
       {results}
       <div className={classes.order}>
         <div className={classes.price}>
-          Total price:  <span> $ {price.toFixed(0)} M </span>
+          Total price:  <span> $ {price.toFixed(0)} {money} </span>
         </div>
         <Button onClick={() => setIsBuying(true)} disabled={!canBuy}>Order</Button>
       </div>
