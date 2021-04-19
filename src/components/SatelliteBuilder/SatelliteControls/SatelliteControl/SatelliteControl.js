@@ -5,13 +5,13 @@ import classes from "./SatelliteControl.module.css";
 
 const SatelliteControl = ({ type, add, remove }) => {
   const names = {
-    astronomical: "Astronomical",
-    comunication: "Comunication",
-    medical: "Medical",
-    meteorological: "Meteorological",
-    military: "Military",
-    navigational: "Navigational",
-    television: "Television",
+    Astronomical: "Astronomical",
+    Comunication: "Comunication",
+    Medical: "Medical",
+    Meteorological: "Meteorological",
+    Military: "Military",
+    Navigational: "Navigational",
+    Television: "Television"
   }
   return (
     <div className={classes.SatelliteControl}>

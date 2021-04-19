@@ -1,9 +1,9 @@
 import classes from "./OrderSummary.module.css";
 import Button from "../../UI/Button/Button";
 
-const OrderSummary = ({ satellites, price }) => {
+const OrderSummary = ({ satellites, price, click, key}) => {
   const results = Object.keys(satellites)
-    .map(type => <li>{type}: {satellites[type]}</li>);
+    .map(type => <li key={key}>{type}: {satellites[type]}</li>);
 
   return (
     <div className={classes.OrderSummary}>
@@ -13,7 +13,7 @@ const OrderSummary = ({ satellites, price }) => {
       <div>
         <strong>Total price: $ {price.toFixed(1)} M</strong>
         <Button>Order</Button>
-        <Button>Exit</Button>
+        <Button onClick={click}>Exit</Button>
       </div>
     </div>
   );

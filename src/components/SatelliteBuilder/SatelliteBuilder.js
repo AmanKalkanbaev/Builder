@@ -9,13 +9,13 @@ import axios from "axios";
 
 const SatelliteBuilder = () => {
   const prices = {
-    astronomical: 64,
-    comunication: 25,
-    medical: 77,
-    meteorological: 96,
-    military: 51,
-    navigational: 23,
-    television: 15,
+    Astronomical: 64,
+    Comunication: 25,
+    Medical: 77,
+    Meteorological: 96,
+    Military: 51,
+    Navigational: 23,
+    Television: 15
   };
   const [satellites, setSatellites] = useState({});
   const [price, setPrice] = useState(0);

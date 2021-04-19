@@ -31,3 +31,15 @@
 .price span{
   color: #ffcc00;
 }
+
+@media (max-width: 549px) {
+  .SatelliteControls {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 916px) {
+  .SatelliteControls {
+    right: 0rem;
+  }
+}
