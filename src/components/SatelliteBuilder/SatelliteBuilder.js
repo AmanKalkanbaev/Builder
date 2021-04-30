@@ -120,7 +120,7 @@ const SatelliteBuilder = ({history}) => {
         price={price} />
       <PizzaControls
         startOrdering={startOrdering}
-        setIsBuying={setIsBuying}
+        // setIsBuying={setIsBuying}
         canBuy={canBuy}
         satellites={satellites}
         addSatellite={addSatellite}
