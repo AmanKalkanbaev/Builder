@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div className={classes.Nav}>
       <NavItem url="/" exact>Builder</NavItem>
-      <NavItem url="checkout">Checkout</NavItem>
+      <NavItem url="/orders">Order</NavItem>
     </div>
   );
 }

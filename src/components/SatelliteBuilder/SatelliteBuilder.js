@@ -3,11 +3,11 @@ import PizzaControls from "./SatelliteControls/SatelliteControls";
 import { useEffect, useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
-
+import Button from"../UI/Button/Button";
 import classes from "./SatelliteBuilder.module.css";
 import axios from "axios";
 
-const SatelliteBuilder = () => {
+const SatelliteBuilder = ({history}) => {
   const prices = {
     Astronomical: 64,
     Comunication: 25,
@@ -19,14 +19,31 @@ const SatelliteBuilder = () => {
   };
   const [satellites, setSatellites] = useState({});
   const [price, setPrice] = useState(0);
+  const [ordering, setOrdering] = useState(false);
+
+  useEffect(loadDefaults, []);
 
 
   const [canBuy, setCanBuy] = useState(true);
+
+
+  
 
   function checkCanBuy(newSatellites) {
     const totalSatellites = Object.values(newSatellites)
       .reduce((total, current) => total + current);
     setCanBuy(totalSatellites > 0);
+  }
+
+  function loadDefaults() {
+    axios
+      .get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
+      .then(response => {
+        setPrice(response.data.price);
+  
+        
+        setSatellites(response.data.satellites);
+      });
   }
 
   const [isBuying, setIsBuying] = useState(false);
@@ -37,6 +54,8 @@ const SatelliteBuilder = () => {
       setPrice(response.data.price);
     })
   },[])
+
+
   function addSatellite(type) {
     const newSatellites = { ...satellites };
     newSatellites[type]++;
@@ -55,16 +74,52 @@ const SatelliteBuilder = () => {
     }
   }
 
+  function startOrdering() {
+    setOrdering(true);
+  }
+  
+  function stopOrdering() {
+    setOrdering(false);
+  }
+
+
+  function finishOrdering() {
+    axios
+    .post('https://builder-test-9feed-default-rtdb.firebaseio.com/orders.json', {
+      satellites: satellites,
+      price: price,
+      address: "28.08.2004",
+      phone: "0 552 955 915",
+      name: "Alinur.Abdyiskakov.Kubatbecovech",
+    })
+    .then(() => {
+      setOrdering(false);
+      loadDefaults();
+      history.push('/checkout');
+    });
+  }
+
   return (
     <div className={classes.SatelliteBuilder}>
-      <Modal show={isBuying} cancelCallback={() => setIsBuying(false)}>
+      <Modal show={ordering}>
+        show={ordering}
+        cancel={stopOrdering}
+        <Button onClick={finishOrdering} >Checkout</Button>
+        <Button onClick={stopOrdering}>Cancel</Button>
         <OrderSummary satellites={satellites} price={price} />
       </Modal>
+
+
+      
+
+
+
 
       <SatellitePreview
         satellites={satellites}
         price={price} />
       <PizzaControls
+        startOrdering={startOrdering}
         setIsBuying={setIsBuying}
         canBuy={canBuy}
         satellites={satellites}
@@ -77,3 +132,7 @@ const SatelliteBuilder = () => {
 }
 
 export default SatelliteBuilder;
+
+
+
+
