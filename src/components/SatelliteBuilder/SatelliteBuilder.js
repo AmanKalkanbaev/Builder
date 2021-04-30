@@ -46,14 +46,14 @@ const SatelliteBuilder = ({history}) => {
       });
   }
 
-  const [isBuying, setIsBuying] = useState(false);
-  useEffect(() => {
-    axios.get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
-    .then(response => {
-      setSatellites(response.data.satellites);
-      setPrice(response.data.price);
-    })
-  },[])
+  // const [isBuying, setIsBuying] = useState(false);
+  // useEffect(() => {
+  //   axios.get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
+  //   .then(response => {
+  //     setSatellites(response.data.satellites);
+  //     setPrice(response.data.price);
+  //   })
+  // },[])
 
 
   function addSatellite(type) {
