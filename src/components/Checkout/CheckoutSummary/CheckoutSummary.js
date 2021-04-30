@@ -1,10 +1,9 @@
 import SatellitePreview from "../../SatelliteBuilder/SatellitePreview/SatellitePreview";
-import Button from "../../UI/Button/Button";
-
+import CheckoutForm from "../CheckoutSummary/CheckoutForm/CheckoutForm";
 import classes from "./CheckoutSummary.module.css";
 
 
-const CheckoutSummary = ({ cancelCallback }) => {
+const CheckoutSummary = ({ submitCallback, cancelCallback }) => {
   return (
     <div className={classes.CheckoutSummary}>
       <div>
@@ -18,10 +17,11 @@ const CheckoutSummary = ({ cancelCallback }) => {
           Television: 1,
         }} price={65} />
       </div>
-      <div>
-        <Button>Checkout</Button>
-        <Button onClick={cancelCallback}>Cancel</Button>
-      </div>
+      <CheckoutForm
+        submitCallback={submitCallback}
+        cancelCallback={cancelCallback}
+      />
+      
     </div>
   );
 }
