@@ -1,4 +1,3 @@
-// import Satellite from "../../Satellites/Satellites";
 import { useDispatch } from "react-redux";
 import Button from "../../../UI/Button/Button";
 
