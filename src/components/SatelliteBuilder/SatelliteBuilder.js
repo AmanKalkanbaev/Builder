@@ -7,6 +7,7 @@ import Button from"../UI/Button/Button";
 import axios from "axios";
 
 import classes from "./SatelliteBuilder.module.css";
+import { useSelector } from "react-redux";
 
 const SatelliteBuilder = ({history}) => {
   const prices = {
@@ -18,11 +19,15 @@ const SatelliteBuilder = ({history}) => {
     Navigational: 23,
     Television: 15
   };
-  const [satellites, setSatellites] = useState({});
+
+
+  // const [satellites, setSatellites] = useState({});
+
+  const satellites = useSelector(state => state.satellites);
   const [price, setPrice] = useState(0);
   const [ordering, setOrdering] = useState(false);
 
-  useEffect(loadDefaults, []);
+  // useEffect(loadDefaults, []);
 
 
   const [canBuy, setCanBuy] = useState(true);
@@ -36,16 +41,16 @@ const SatelliteBuilder = ({history}) => {
     setCanBuy(totalSatellites > 0);
   }
 
-  function loadDefaults() {
-    axios
-      .get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
-      .then(response => {
-        setPrice(response.data.price);
+  // function loadDefaults() {
+  //   axios
+  //     .get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
+  //     .then(response => {
+  //       setPrice(response.data.price);
   
         
-        setSatellites(response.data.satellites);
-      });
-  }
+  //       setSatellites(response.data.satellites);
+  //     });
+  // }
 
 
   function addSatellite(type) {
@@ -53,7 +58,7 @@ const SatelliteBuilder = ({history}) => {
     newSatellites[type]++;
     checkCanBuy(newSatellites);
     setPrice(price + prices[type]);
-    setSatellites(newSatellites);
+    // setSatellites(newSatellites);
   }
 
   function removeSatellite(type) {
@@ -62,7 +67,7 @@ const SatelliteBuilder = ({history}) => {
       newSatellites[type]--;
       checkCanBuy(newSatellites);
       setPrice(price - prices[type]);
-      setSatellites(newSatellites);
+      // setSatellites(newSatellites);
     }
   }
 
@@ -86,7 +91,7 @@ const SatelliteBuilder = ({history}) => {
     })
     .then(() => {
       setOrdering(false);
-      loadDefaults();
+      // loadDefaults();
       history.push('/checkout');
     });
   }
