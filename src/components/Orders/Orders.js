@@ -9,10 +9,13 @@ const Orders = () => {
   useEffect(() => {
     axios.get('https://builder-test-9feed-default-rtdb.firebaseio.com/orders.json')
       .then(response => {
-        setOrders(Object.values(response.data));
-      });
+        if (response.data){
+          setOrders(Object.values(response.data));
+        }
+        
+      }); 
   }, []);
-
+  
   const results =  orders.map(order => <Order {...order} />);
 
   return (

@@ -3,7 +3,7 @@ import Button from "../../UI/Button/Button";
 
 import classes from "./SatelliteControls.module.css";
 
-const SatelliteControls = ({ satellites, addSatellite, removeSatellite, price,startOrdering }) => {
+const SatelliteControls = ({ satellites,  price,startOrdering }) => {
   const results = [];
 
   let total = 0;
@@ -16,8 +16,6 @@ const SatelliteControls = ({ satellites, addSatellite, removeSatellite, price,st
     results.push(<SatelliteControl
 
       key={satellite}
-      add={addSatellite}
-      remove={removeSatellite}
       count={satellites[satellite]}
       type={satellite} 
 

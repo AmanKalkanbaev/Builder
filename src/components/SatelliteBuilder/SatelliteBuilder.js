@@ -10,21 +10,12 @@ import classes from "./SatelliteBuilder.module.css";
 import { useSelector } from "react-redux";
 
 const SatelliteBuilder = ({history}) => {
-  const prices = {
-    Astronomical: 64,
-    Comunication: 25,
-    Medical: 77,
-    Meteorological: 96,
-    Military: 51,
-    Navigational: 23,
-    Television: 15
-  };
+  
 
 
-  // const [satellites, setSatellites] = useState({});
 
   const satellites = useSelector(state => state.satellites);
-  const [price, setPrice] = useState(0);
+  const price = useSelector(state => state.price);
   const [ordering, setOrdering] = useState(false);
 
   // useEffect(loadDefaults, []);
@@ -41,35 +32,8 @@ const SatelliteBuilder = ({history}) => {
     setCanBuy(totalSatellites > 0);
   }
 
-  // function loadDefaults() {
-  //   axios
-  //     .get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
-  //     .then(response => {
-  //       setPrice(response.data.price);
+
   
-        
-  //       setSatellites(response.data.satellites);
-  //     });
-  // }
-
-
-  function addSatellite(type) {
-    const newSatellites = { ...satellites };
-    newSatellites[type]++;
-    checkCanBuy(newSatellites);
-    setPrice(price + prices[type]);
-    // setSatellites(newSatellites);
-  }
-
-  function removeSatellite(type) {
-    if (satellites[type]) {
-      const newSatellites = { ...satellites };
-      newSatellites[type]--;
-      checkCanBuy(newSatellites);
-      setPrice(price - prices[type]);
-      // setSatellites(newSatellites);
-    }
-  }
 
   function startOrdering() {
     setOrdering(true);
@@ -81,19 +45,9 @@ const SatelliteBuilder = ({history}) => {
 
 
   function finishOrdering() {
-    axios
-    .post('https://builder-test-9feed-default-rtdb.firebaseio.com/orders.json', {
-      satellites: satellites,
-      price: price,
-      address: "28.08.2004",
-      phone: "0 552 955 915",
-      name: "Alinur.Abdyiskakov.Kubatbecovech",
-    })
-    .then(() => {
-      setOrdering(false);
+    setOrdering(false);
       // loadDefaults();
-      history.push('/checkout');
-    });
+    history.push('/checkout');
   }
 
   return (
@@ -120,8 +74,6 @@ const SatelliteBuilder = ({history}) => {
         startOrdering={startOrdering}
         canBuy={canBuy}
         satellites={satellites}
-        addSatellite={addSatellite}
-        removeSatellite={removeSatellite}
         price={price}
       />
     </div>

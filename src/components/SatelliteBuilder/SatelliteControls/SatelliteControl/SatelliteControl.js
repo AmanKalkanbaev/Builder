@@ -32,7 +32,7 @@ const SatelliteControl = ({ type, count }) => {
 
         </div>
 
-        <Button className={classes.less} disabled={!count} onClick={() => dispatch({type:"ADD_SATELLITE", satellite: type})}>
+        <Button className={classes.less} disabled={!count} onClick={() => dispatch({type:"REMOVE_SATELLITE", satellite: type})}>
             -
         </Button>
 
