@@ -1,7 +1,7 @@
 import Layout from "./components/Layout/Layout";
 import SatelliteBuilder from "./components/SatelliteBuilder/SatelliteBuilder";
 import Checkout from "../src/components/Checkout/Checkout"
-// import Stars from "./components/UI/Stars/Stars"
+// import Star from "./components/UI/Stars/Star"
 import { Redirect, Route, Switch } from "react-router";
 import Orders from "./components/Orders/Orders";
 
@@ -22,7 +22,7 @@ const App = () => {
         
       </Layout>
       
-      {/* <Stars/> */}
+      {/* <Star/> */}
     </div>
   );
 }

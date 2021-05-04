@@ -17,6 +17,9 @@
   flex-wrap: wrap;
 }
 
+/* .results {position: absolute; }
+.results div {width: 30px; height: 30px; position: absolute; } */
+
 
 @keyframes planet-movement{
   0%{

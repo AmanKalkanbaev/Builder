@@ -3,14 +3,22 @@ import Button from "../../UI/Button/Button";
 
 import classes from "./SatelliteControls.module.css";
 
-const SatelliteControls = ({ satellites, addSatellite, removeSatellite, canBuy, setIsBuying, price}) => {
+const SatelliteControls = ({ satellites, addSatellite, removeSatellite, price,startOrdering }) => {
   const results = [];
+
+  let total = 0;
+
+
   for (const satellite in satellites) {
+
+    total += satellites[satellite];
+
     results.push(<SatelliteControl
 
       key={satellite}
       add={addSatellite}
       remove={removeSatellite}
+      count={satellites[satellite]}
       type={satellite} 
 
     />)
@@ -30,7 +38,7 @@ const SatelliteControls = ({ satellites, addSatellite, removeSatellite, canBuy, 
         <div className={classes.price}>
           Total price:  <span> $ {price.toFixed(0)} {money} </span>
         </div>
-        <Button onClick={() => setIsBuying(true)} disabled={!canBuy}>Order</Button>
+        <Button onClick={startOrdering} disabled={!total}>Order</Button>
       </div>
     </div>
   );

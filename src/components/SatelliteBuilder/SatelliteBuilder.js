@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
 import Button from"../UI/Button/Button";
-import classes from "./SatelliteBuilder.module.css";
 import axios from "axios";
+
+import classes from "./SatelliteBuilder.module.css";
 
 const SatelliteBuilder = ({history}) => {
   const prices = {
@@ -45,15 +46,6 @@ const SatelliteBuilder = ({history}) => {
         setSatellites(response.data.satellites);
       });
   }
-
-  // const [isBuying, setIsBuying] = useState(false);
-  // useEffect(() => {
-  //   axios.get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
-  //   .then(response => {
-  //     setSatellites(response.data.satellites);
-  //     setPrice(response.data.price);
-  //   })
-  // },[])
 
 
   function addSatellite(type) {
@@ -101,9 +93,8 @@ const SatelliteBuilder = ({history}) => {
 
   return (
     <div className={classes.SatelliteBuilder}>
-      <Modal show={ordering}>
-        show={ordering}
-        cancel={stopOrdering}
+      <Modal show={ordering} cancel={stopOrdering}>
+        
         <Button onClick={finishOrdering} >Checkout</Button>
         <Button onClick={stopOrdering}>Cancel</Button>
         <OrderSummary satellites={satellites} price={price} />
@@ -117,16 +108,17 @@ const SatelliteBuilder = ({history}) => {
 
       <SatellitePreview
         satellites={satellites}
-        price={price} />
+        price={price}
+      />
+
       <PizzaControls
         startOrdering={startOrdering}
-        // setIsBuying={setIsBuying}
         canBuy={canBuy}
         satellites={satellites}
         addSatellite={addSatellite}
         removeSatellite={removeSatellite}
         price={price}
-        />
+      />
     </div>
   );
 }

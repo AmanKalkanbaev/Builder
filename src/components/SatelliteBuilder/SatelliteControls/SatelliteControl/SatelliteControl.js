@@ -3,7 +3,7 @@ import Button from "../../../UI/Button/Button";
 
 import classes from "./SatelliteControl.module.css";
 
-const SatelliteControl = ({ type, add, remove }) => {
+const SatelliteControl = ({ type, add, remove, count }) => {
   const names = {
     Astronomical: "Astronomical",
     Comunication: "Comunication",
@@ -15,14 +15,25 @@ const SatelliteControl = ({ type, add, remove }) => {
   }
   return (
     <div className={classes.SatelliteControl}>
+
       <div className={classes.ControlLine}>
-        <Button className={classes.more} onClick={() => add(type)}>+</Button>
+
+        <Button className={classes.more} onClick={() => add(type)}>
+            +
+        </Button>
+
         <div className={classes.satellite}>
-          {/* <Satellite type={type} fixed /> */}
+
           {names[type]}
+
         </div>
-        <Button className={classes.less} onClick={() => remove(type)}>-</Button>
+
+        <Button className={classes.less} disabled={!count} onClick={() => remove(type)}>
+            -
+        </Button>
+
       </div>
+
     </div>
   );
 }

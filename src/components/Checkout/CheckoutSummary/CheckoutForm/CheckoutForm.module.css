@@ -1,0 +1,14 @@
+.ChackoutForm label{
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.Forms div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+.Forms input{
+    margin-left: 0.5rem;
+}
