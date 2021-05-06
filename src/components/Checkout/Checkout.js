@@ -1,4 +1,4 @@
-import CheckoutSummary from "./CheckoutSummary/CheckoutSummary"
+
 import axios from "axios";
 import { useSelector } from "react-redux";
 import CheckoutForm from "./CheckoutSummary/CheckoutForm/CheckoutForm";
@@ -26,10 +26,6 @@ const Checkout = ({ history }) => {
     }).then(response =>{
       history.replace('/');
     })
-
-    const order = {
-      
-    }
     
     event.preventDefault();
   }

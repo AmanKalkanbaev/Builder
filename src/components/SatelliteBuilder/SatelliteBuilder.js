@@ -1,10 +1,9 @@
 import SatellitePreview from "./SatellitePreview/SatellitePreview";
 import PizzaControls from "./SatelliteControls/SatelliteControls";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
 import Button from"../UI/Button/Button";
-import axios from "axios";
 
 import classes from "./SatelliteBuilder.module.css";
 import { useSelector } from "react-redux";
@@ -26,11 +25,11 @@ const SatelliteBuilder = ({history}) => {
 
   
 
-  function checkCanBuy(newSatellites) {
-    const totalSatellites = Object.values(newSatellites)
-      .reduce((total, current) => total + current);
-    setCanBuy(totalSatellites > 0);
-  }
+  // function checkCanBuy(newSatellites) {
+  //   const totalSatellites = Object.values(newSatellites)
+  //     .reduce((total, current) => total + current);
+  //   setCanBuy(totalSatellites > 0);
+  // }
 
 
   

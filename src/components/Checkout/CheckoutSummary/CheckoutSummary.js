@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+
 import SatellitePreview from "../../SatelliteBuilder/SatellitePreview/SatellitePreview";
 import CheckoutForm from "../CheckoutSummary/CheckoutForm/CheckoutForm";
 import classes from "./CheckoutSummary.module.css";

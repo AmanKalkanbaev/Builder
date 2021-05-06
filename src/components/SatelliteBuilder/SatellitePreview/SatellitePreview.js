@@ -17,9 +17,9 @@ const SatellitePreview = ({ satellites }) => {
 
   }
 
-  let num = 6;
-  let wrap = 600;
-  let radius = 550;
+  // let num = 6;
+  // let wrap = 600;
+  // let radius = 550;
 
   // result.ready(function() {
   //   for (let i=0;i<num; i++){
