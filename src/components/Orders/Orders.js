@@ -9,9 +9,8 @@ const Orders = () => {
   useEffect(() => {
     axios.get('https://builder-test-9feed-default-rtdb.firebaseio.com/orders.json')
       .then(response => {
-        if (response.data){
-          setOrders(Object.values(response.data));
-        }
+
+        setOrders(Object.values(response.data));
         
       }); 
   }, []);
