@@ -19,7 +19,7 @@ const SatelliteBuilder = ({history}) => {
 
 
 
-  const [canBuy, setCanBuy] = useState(true);
+  // const [canBuy, setCanBuy] = useState(true);
 
 
   
