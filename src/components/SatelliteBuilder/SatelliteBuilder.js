@@ -1,5 +1,5 @@
 import SatellitePreview from "./SatellitePreview/SatellitePreview";
-import PizzaControls from "./SatelliteControls/SatelliteControls";
+import SatelliteControls from "./SatelliteControls/SatelliteControls";
 import {  useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
@@ -17,7 +17,6 @@ const SatelliteBuilder = ({history}) => {
   const price = useSelector(state => state.price);
   const [ordering, setOrdering] = useState(false);
 
-  // useEffect(loadDefaults, []);
 
 
   const [canBuy, setCanBuy] = useState(true);
@@ -69,9 +68,8 @@ const SatelliteBuilder = ({history}) => {
         price={price}
       />
 
-      <PizzaControls
+      <SatelliteControls
         startOrdering={startOrdering}
-        canBuy={canBuy}
         satellites={satellites}
         price={price}
       />

@@ -34,6 +34,8 @@ const builderReducer = (state = initialState, action) => {
             newState.price -= prices[action.satellite];
             break
 
+            default:
+            break;
     }
 
     return newState;
