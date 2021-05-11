@@ -32,7 +32,7 @@ const CheckoutForm = ({submitCallback, cancelCallback }) => {
                         type="text"
                         id="address"
                         name="address"
-                        placeholder="№25 ctrit Adam">
+                        placeholder="№25 strit Adam">
                     </input>
                 </div>
             </div>

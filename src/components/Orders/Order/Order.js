@@ -28,9 +28,8 @@ const Order = ({ name, phone, address, satellites,price }) => {
       <li><span>Name:</span> {name}</li>
       <li><span>Phone:</span> {phone}</li>
       <li><span>Address:</span> {address}</li>
-      <li><span>Animal pet  shop:</span>  {output}</li>
+      <li><span>Your satellites:</span>  {output}</li>
       <li><span>Price:</span> {price}</li>
-      <li><strong>Thanks for your purchase</strong></li>
     </ul>
   );
 }

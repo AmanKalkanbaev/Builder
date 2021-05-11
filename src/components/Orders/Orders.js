@@ -15,12 +15,15 @@ const Orders = () => {
       }); 
   }, []);
   
+  
   const results =  orders.map(order => <Order {...order} />);
-
+  console.log(results)
+  
   return (
     <div className={classes.Orders}>
       {results}
     </div>
+    
   );
 }
 
