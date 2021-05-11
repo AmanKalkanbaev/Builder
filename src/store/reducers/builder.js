@@ -1,4 +1,4 @@
-import { ADD_SATELLITE, REMOVE_SATELLITE } from "../actions/types";
+import { ADD_SATELLITE, REMOVE_SATELLITE, SET_SATELLITE} from "../actions/types";
 
 const initialState = {
     satellites:{
@@ -29,8 +29,11 @@ const builder = (state = initialState, action) => {
             newState.price -= prices[action.satellite];
             break
 
-            default:
-            break;
+        case SET_SATELLITE:
+        return { ...action.data };
+
+        default:
+        break;
     }
 
     return newState;
