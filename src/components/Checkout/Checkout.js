@@ -7,8 +7,8 @@ import SatellitePreview from "../SatelliteBuilder/SatellitePreview/SatellitePrev
 
 const Checkout = ({ history }) => {
 
-  const satellites = useSelector(state => state.satellites);
-  const price = useSelector(state => state.price);
+  const satellites = useSelector(state => state.builder.satellites);
+  const price = useSelector(state => state.builder.price);
 
   function cancelCallback() {
     history.replace('/');

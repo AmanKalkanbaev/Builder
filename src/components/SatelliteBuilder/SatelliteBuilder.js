@@ -13,8 +13,8 @@ const SatelliteBuilder = ({history}) => {
 
 
 
-  const satellites = useSelector(state => state.satellites);
-  const price = useSelector(state => state.price);
+  const satellites = useSelector(state => state.builder.satellites);
+  const price = useSelector(state => state.builder.price);
   const [ordering, setOrdering] = useState(false);
 
 
