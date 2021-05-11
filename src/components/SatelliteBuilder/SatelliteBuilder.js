@@ -40,7 +40,7 @@ const SatelliteBuilder = ({history}) => {
     <div className={classes.SatelliteBuilder}>
       <Modal show={ordering} cancel={stopOrdering}>
         
-        <Button onClick={finishOrdering} >Checkout</Button>
+        <Button onClick={finishOrdering} green="green">Checkout</Button>
         <Button onClick={stopOrdering}>Cancel</Button>
         <OrderSummary satellites={satellites} price={price} />
       </Modal>

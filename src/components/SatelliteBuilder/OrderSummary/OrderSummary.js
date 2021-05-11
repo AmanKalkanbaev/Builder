@@ -3,7 +3,7 @@ import classes from "./OrderSummary.module.css";
 const OrderSummary = ({ satellites, price, key}) => {
   const results = Object.keys(satellites)
       
-  .map(type => <li key={key}>{type}: {satellites[type]}</li>);
+  .map(type => <li key={type}>{type}: {satellites[type]}</li>);
 
   let money = "M";
   if(price >= 1000) {
