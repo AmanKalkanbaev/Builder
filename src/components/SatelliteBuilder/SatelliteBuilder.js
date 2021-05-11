@@ -6,32 +6,20 @@ import Modal from "../UI/Modal/Modal";
 import Button from"../UI/Button/Button";
 
 import classes from "./SatelliteBuilder.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { load } from "../../store/actions/builder";
 
 const SatelliteBuilder = ({history}) => {
   
 
-
+  const dispatch = useDispatch();
 
   const satellites = useSelector(state => state.builder.satellites);
   const price = useSelector(state => state.builder.price);
   const [ordering, setOrdering] = useState(false);
 
 
-
-  // const [canBuy, setCanBuy] = useState(true);
-
-
-  
-
-  // function checkCanBuy(newSatellites) {
-  //   const totalSatellites = Object.values(newSatellites)
-  //     .reduce((total, current) => total + current);
-  //   setCanBuy(totalSatellites > 0);
-  // }
-
-
-  
+  useEffect(() => dispatch(load()), [dispatch]);
 
   function startOrdering() {
     setOrdering(true);
