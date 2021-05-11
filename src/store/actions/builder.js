@@ -1,13 +1,12 @@
 import { ADD_SATELLITE, REMOVE_SATELLITE,SET_SATELLITE } from "./types";
-import axios from "axios";
 import axios from "../../axios";
 
-export const add = (ingredient) => ({
+export const add = (satellite) => ({
   type: ADD_SATELLITE,
   satellite: satellite
 });
 
-export const remove = (ingredient) => ({
+export const remove = (satellite) => ({
   type: REMOVE_SATELLITE,
   satellite: satellite
 });

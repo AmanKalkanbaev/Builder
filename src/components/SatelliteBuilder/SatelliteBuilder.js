@@ -1,6 +1,6 @@
 import SatellitePreview from "./SatellitePreview/SatellitePreview";
 import SatelliteControls from "./SatelliteControls/SatelliteControls";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
 import Button from"../UI/Button/Button";
@@ -67,7 +67,7 @@ const SatelliteBuilder = ({history}) => {
   );
 }
 
-export default  withAxios(PizzaBuilder, axios);;
+export default  withAxios(SatelliteBuilder, axios);;
 
 
 
