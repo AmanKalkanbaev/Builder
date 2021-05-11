@@ -1,3 +1,5 @@
+import { ADD_SATELLITE, REMOVE_SATELLITE } from "../actions/types";
+
 const initialState = {
     satellites:{
         Astronomical: 1,
@@ -25,11 +27,11 @@ const builder = (state = initialState, action) => {
     const newState = {...state};
 
     switch(action.type){
-        case  "ADD_SATELLITE":
+        case  ADD_SATELLITE:
             newState.satellites[action.satellite]++;
             newState.price += prices[action.satellite];
             break
-        case  "REMOVE_SATELLITE":
+        case  REMOVE_SATELLITE:
             newState.satellites[action.satellite]--;
             newState.price -= prices[action.satellite];
             break

@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import Button from "../../../UI/Button/Button";
+import { add, remove } from "../../../../store/actions/builder";
 
 import classes from "./SatelliteControl.module.css";
 
@@ -21,7 +22,7 @@ const SatelliteControl = ({ type, count }) => {
 
       <div className={classes.ControlLine}>
 
-        <Button className={classes.more} onClick={() => dispatch({type:"ADD_SATELLITE", satellite: type})}>
+        <Button className={classes.more} onClick={() => dispatch(add(type))}>
             +
         </Button>
 
@@ -31,7 +32,7 @@ const SatelliteControl = ({ type, count }) => {
 
         </div>
 
-        <Button className={classes.less} disabled={!count} onClick={() => dispatch({type:"REMOVE_SATELLITE", satellite: type})}>
+        <Button className={classes.less} disabled={!count} onClick={() => dispatch(remove(type))}>
             -
         </Button>
 
