@@ -1,9 +1,11 @@
 
 import axios from "axios";
+import axios from "../../axios";
 import { useSelector } from "react-redux";
 import CheckoutForm from "./CheckoutSummary/CheckoutForm/CheckoutForm";
 import classes from "../Checkout/Checkout.module.css";
 import SatellitePreview from "../SatelliteBuilder/SatellitePreview/SatellitePreview";
+import withAxios from "../withAxios";
 
 const Checkout = ({ history }) => {
 
@@ -17,7 +19,7 @@ const Checkout = ({ history }) => {
   function submitCallback(event) {
     const data = new FormData(event.target);
 
-    axios.post('https://builder-test-9feed-default-rtdb.firebaseio.com/orders.json',{
+    axios.post('/orders.json',{
       name: data.get('name'),
       phone: data.get('phone'),
       address: data.get('address'),
@@ -42,4 +44,4 @@ const Checkout = ({ history }) => {
   );
 }
  
-export default Checkout;
+export default withAxios(Checkout, axios);

@@ -1,5 +1,6 @@
 import { ADD_SATELLITE, REMOVE_SATELLITE,SET_SATELLITE } from "./types";
 import axios from "axios";
+import axios from "../../axios";
 
 export const add = (ingredient) => ({
   type: ADD_SATELLITE,
@@ -18,6 +19,6 @@ export const set = (data) => ({
 
 export const load = () => {
   return (dispatch) => axios
-    .get('https://builder-test-9feed-default-rtdb.firebaseio.com/default.json')
+    .get('/default.json')
     .then(response => dispatch(set(response.data)));
 } 

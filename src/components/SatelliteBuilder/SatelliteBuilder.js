@@ -4,6 +4,8 @@ import {  useState } from "react";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Modal from "../UI/Modal/Modal";
 import Button from"../UI/Button/Button";
+import withAxios from "../withAxios";
+import axios from "../../axios";
 
 import classes from "./SatelliteBuilder.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -65,7 +67,7 @@ const SatelliteBuilder = ({history}) => {
   );
 }
 
-export default SatelliteBuilder;
+export default  withAxios(PizzaBuilder, axios);;
 
 
 
