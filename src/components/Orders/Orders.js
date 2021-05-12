@@ -9,20 +9,14 @@ import classes from "./Orders.module.css";
 
 const Orders = () => {
   const dispatch = useDispatch();
-  const orders = useSelector(state => state.orders);
+  const orders = useSelector((state) => state.orders);
 
   useEffect(() => dispatch(load()), [dispatch]);
-  
-  
-  const results =  orders.map(order => <Order {...order} />);
-  console.log(results)
-  
-  return (
-    <div className={classes.Orders}>
-      {results}
-    </div>
-    
-  );
-}
+
+  const results = orders.map((order) => <Order key={order.id} {...order} />);
+  // console.log(results)
+
+  return <div className={classes.Orders}>{results}</div>;
+};
 
 export default withAxios(Orders, axios);

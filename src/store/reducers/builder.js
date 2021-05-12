@@ -2,8 +2,15 @@ import { ADD_SATELLITE, REMOVE_SATELLITE, SET_SATELLITE} from "../actions/types"
 
 const initialState = {
     satellites:{
+        Astronomical: 1,
+        Comunication: 1,
+        Medical: 1,
+        Meteorological: 1,
+        Military: 1,
+        Navigational: 1,
+        Television: 1
     },
-    price:0,
+    price:351,
 }
 
 const prices = {

@@ -6,10 +6,11 @@ import Modal from "../UI/Modal/Modal";
 import Button from"../UI/Button/Button";
 import withAxios from "../withAxios";
 import axios from "../../axios";
-
-import classes from "./SatelliteBuilder.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { load } from "../../store/actions/builder";
+
+import classes from "./SatelliteBuilder.module.css";
+
 
 const SatelliteBuilder = ({history}) => {
   
@@ -34,7 +35,6 @@ const SatelliteBuilder = ({history}) => {
 
   function finishOrdering() {
     setOrdering(false);
-      // loadDefaults();
     history.push('/checkout');
   }
 
@@ -67,8 +67,4 @@ const SatelliteBuilder = ({history}) => {
   );
 }
 
-export default  withAxios(SatelliteBuilder, axios);;
-
-
-
-
+export default  withAxios(SatelliteBuilder, axios);
