@@ -6,7 +6,7 @@ const CheckoutForm = ({submitCallback, cancelCallback }) => {
 
             <div className={classes.Forms}>
                 <div>
-                    <label for="name" >Name</label>
+                    <label htmlFor="name" >Name</label>
                     <input
                         type="text"
                         id="name"
