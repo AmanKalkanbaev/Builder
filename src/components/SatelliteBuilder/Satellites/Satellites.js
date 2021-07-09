@@ -11,13 +11,13 @@ import classes from "./Satellites.module.css";
 
 const Satellites = ({ type }) => {
   const types = {
-    Astronomical: { backgroundImage: `url(${astronomicalBackground})`, width: "45px", height: "45px" },
-    Comunication: { backgroundImage: `url(${comunicationBackground})`, width: "45px", height: "45px" },
-    Medical: { backgroundImage: `url(${medicalBackground})`, width: "45px", height: "45px" },
-    Meteorological: { backgroundImage: `url(${meteorologicalBackground})`, width: "45px", height: "45px" },
-    Military: { backgroundImage: `url(${militaryBackground})`, width: "45px", height: "45px" },
-    Navigational: { backgroundImage: `url(${navigationalBackground})`, width: "45px", height: "45px" },
-    Television: { backgroundImage: `url(${televisionBackground})`, width: "45px", height: "45px" },
+    Astronomical: { backgroundImage: `url(${astronomicalBackground})` },
+    Comunication: { backgroundImage: `url(${comunicationBackground})`  },
+    Medical: { backgroundImage: `url(${medicalBackground})`  },
+    Meteorological: { backgroundImage: `url(${meteorologicalBackground})`  },
+    Military: { backgroundImage: `url(${militaryBackground})`  },
+    Navigational: { backgroundImage: `url(${navigationalBackground})`  },
+    Television: { backgroundImage: `url(${televisionBackground})`  },
   };
 
   return (

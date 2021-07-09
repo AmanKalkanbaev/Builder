@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   justify-content: center;
   transform: rotate(0);
-  animation: orbit-rotate 20s infinite ;
 }
 
 .video{
@@ -17,8 +16,86 @@
   flex-wrap: wrap;
 }
 
-/* .results {position: absolute; }
-.results div {width: 30px; height: 30px; position: absolute; } */
+.satellite{
+  left: -20px;
+  top: -30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: rgb(255, 255, 255) 1px dashed;
+  border-radius: 50%;
+  height: 520px;
+  width: 520px;
+  margin: 1rem;
+  transform: rotate(0deg);
+  animation: circle linear 30s infinite;
+}
+
+.satellite div{
+  position: absolute;
+  height: 260px;
+  background: no-repeat;
+  transform-origin: bottom;
+  
+}
+
+.satellite div:first-child{
+  transform: rotate(20deg);
+}
+.satellite div:nth-child(4){
+  transform: rotate(40deg);
+}
+.satellite div:nth-child(6){
+  transform: rotate(60deg);
+}
+.satellite div:nth-child(2){
+  transform: rotate(80deg);
+}
+.satellite div:nth-child(5){
+  transform: rotate(100deg);
+}
+.satellite div:nth-child(3){
+  transform: rotate(120deg);
+}
+.satellite div:nth-child(7){
+  transform: rotate(140deg);
+}
+
+.satellite div:nth-child(10){
+  transform: rotate(160deg);
+}
+.satellite div:nth-child(8){
+  transform: rotate(180deg);
+}
+.satellite div:nth-child(13){
+  transform: rotate(200deg);
+}
+.satellite div:nth-child(15){
+  transform: rotate(220deg);
+}
+.satellite div:nth-child(11){
+  transform: rotate(240deg);
+}
+.satellite div:nth-child(16){
+  transform: rotate(260deg);
+}
+.satellite div:nth-child(12){
+  transform: rotate(280deg);
+}
+
+.satellite div:nth-child(18){
+  transform: rotate(300deg);
+}
+.satellite div:nth-child(17){
+  transform: rotate(320deg);
+}
+.satellite div:nth-child(9){
+  transform: rotate(340deg);
+}
+.satellite div:nth-child(14){
+  transform: rotate(360deg);
+}
 
 
 @keyframes planet-movement{
@@ -41,12 +118,13 @@
   }
 }
 
-/* @keyframes orbit-rotate{
+@keyframes circle {
   0%{
-    transform: rotate(0);
+      transform: rotate(0);
+  }
 
-  }
   100%{
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
-} */
+  
+}

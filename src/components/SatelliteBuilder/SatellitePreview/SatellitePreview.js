@@ -11,26 +11,13 @@ const SatellitePreview = ({ satellites }) => {
 
     for (let i = 0; i < satellites[satellite]; i++) {
 
-      result.push(<Satellite key={satellite + i} type={satellite} />)
+      result.push(<Satellite  key={satellite + i} type={satellite}/>)
 
     }
 
   }
 
-  // let num = 6;
-  // let wrap = 600;
-  // let radius = 550;
 
-  // result.ready(function() {
-  //   for (let i=0;i<num; i++){
-  //     let f = 2 / num * i * Math.PI;  // Рассчитываем угол каждой картинки в радианах
-  //     let left = wrap + radius * Math.sin(f) + 'px';
-  //     let top = wrap + radius * Math.cos(f) + 'px';
-  //     result.div.eq(i).css({'top':top,'left':left}); // Устанавливаем значения каждой картинке
-  //   }
-  // });
-
-  
 
   return (
     <div className={classes.SatellitePreview}>
@@ -46,7 +33,9 @@ const SatellitePreview = ({ satellites }) => {
 
       <div className={classes.results} >
 
-        {result}
+        <div className={classes.satellite}>
+          {result}
+        </div>
 
       </div>
 
